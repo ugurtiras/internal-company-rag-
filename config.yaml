@@ -27,6 +27,12 @@ retrieval:
     query_prefix: "query: "
     passage_prefix: "passage: "
 
+web:
+  host: 127.0.0.1
+  port: 8000
+  max_k: 10
+  max_question_chars: 500
+
 # ASSUMPTION: department labels are readable only by that department and management;
 # 'muhendislik' only by engineering and management; the 'ik' role also reads 'ik_gizli'.
 # Pending confirmation.

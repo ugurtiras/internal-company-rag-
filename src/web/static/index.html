@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Penguin Cloud — Dahili Doküman Asistanı</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Penguin Cloud</h1>
+    <p>Dahili doküman arama — rol bazlı erişim kontrollü</p>
+  </header>
+
+  <main>
+    <section class="panel" id="panel-ask">
+      <label for="role">Rol</label>
+      <select id="role" aria-label="Rol seçimi"></select>
+      <div id="role-labels" class="labels"></div>
+
+      <label for="question">Soru</label>
+      <div class="ask-row">
+        <input id="question" type="text" placeholder="Örn: SLA ihlalinde tazminat oranı nasıl belirlenir?" autocomplete="off">
+        <select id="k" aria-label="Sonuç sayısı"></select>
+        <button id="ask">Sor</button>
+      </div>
+      <div id="error" class="error" hidden></div>
+    </section>
+
+    <section id="results">
+      <p id="status" class="status hidden"></p>
+      <div id="result-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    Erişim filtresi sıralamadan önce uygulanır — rolünüzün okuyamadığı dokümanlar sonuçta yer alamaz.
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
