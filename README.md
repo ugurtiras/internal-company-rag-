@@ -34,6 +34,13 @@ ruff check . && ruff format --check .
 
 ## Demo
 
+Web UI (standard library only, no extra dependencies):
+
+```bash
+python -m src.web
+# open http://127.0.0.1:8000
+```
+
 Same question, three roles — support can not see the legal compensation policy,
 legal can:
 
