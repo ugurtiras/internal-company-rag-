@@ -1,0 +1,6 @@
+# Development dependencies with pinned versions (pytest and ruff only).
+# The previously committed file was an unrelated full `pip freeze` output
+# (selenium, opencv, telegram, Flask, ...); it has been reduced to what the
+# project actually uses. Versions were taken from that freeze; none invented.
+pytest==9.1.1
+ruff==0.17.0

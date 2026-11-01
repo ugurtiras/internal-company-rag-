@@ -1,0 +1,58 @@
+# All tunable values live here, not in code.
+app:
+  log_level: INFO
+
+data:
+  raw_dir: data/raw
+  golden_path: eval/golden_qa.jsonl
+
+chunking:
+  # section | fixed
+  strategy: section
+  max_chars: 1200
+  fixed_size: 500
+  fixed_overlap: 100
+
+retrieval:
+  # bm25 | dense
+  type: bm25
+  top_k: 5
+  bm25:
+    k1: 1.5
+    b: 0.75
+    # 0 = disabled; rough Turkish root heuristic: keep first N chars of each token
+    stem_prefix: 5
+  dense:
+    model_name: intfloat/multilingual-e5-base
+    query_prefix: "query: "
+    passage_prefix: "passage: "
+
+web:
+  host: 127.0.0.1
+  port: 8000
+  max_k: 10
+  max_question_chars: 500
+
+# ASSUMPTION: department labels are readable only by that department and management;
+# 'muhendislik' only by engineering and management; the 'ik' role also reads 'ik_gizli'.
+# Pending confirmation.
+roles:
+  calisan: [tum_calisanlar]
+  muhendis: [tum_calisanlar, muhendislik]
+  destek: [tum_calisanlar, destek]
+  satis: [tum_calisanlar, satis]
+  finans: [tum_calisanlar, finans]
+  hukuk: [tum_calisanlar, hukuk]
+  ik: [tum_calisanlar, ik, ik_gizli]
+  yonetim:
+    [
+      tum_calisanlar,
+      muhendislik,
+      destek,
+      satis,
+      finans,
+      hukuk,
+      ik,
+      ik_gizli,
+      yonetim,
+    ]

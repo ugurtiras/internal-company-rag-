@@ -1,0 +1,7 @@
+# Runtime dependencies with pinned versions.
+# Versions were taken from the previous unpinned freeze in requirements-dev.txt
+# (installed in the project environment); none were invented.
+# PyYAML: front matter and config parsing (src/ingestion/frontmatter.py, src/utils/config.py).
+PyYAML==6.0.3
+# numpy: linear algebra support used by the dense option and future vector work.
+numpy==2.2.6

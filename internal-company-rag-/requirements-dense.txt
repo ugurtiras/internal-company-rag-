@@ -1,0 +1,6 @@
+# Optional dense-retrieval dependencies. Install with:
+#   pip install -r requirements-dense.txt
+# After installing, pin the actual version: run `pip freeze`, copy the
+# sentence-transformers line here, and commit the pinned version.
+# Do not guess versions.
+sentence-transformers

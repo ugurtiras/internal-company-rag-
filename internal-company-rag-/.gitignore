@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Vector DB files and logs (never commit)
+data/index/*
+!data/index/.gitkeep
+logs/*
+!logs/.gitkeep
+chroma/
+*.faiss
+*.sqlite3
+
+.vscode/
+.idea/
+.DS_Store
